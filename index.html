@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>陪伴搭子 · 你的临时同伴</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background: #f7f5f2;
+            color: #2c2416;
+            line-height: 1.6;
+            padding: 24px 20px 40px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        /* ----- 卡片容器 ----- */
+        .card {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 28px 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04), 0 4px 10px rgba(0, 0, 0, 0.02);
+        }
+
+        /* ----- 头部区域 ----- */
+        .hero {
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #e8e0d5;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .hero h1 {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .subtitle {
+            font-size: 15px;
+            color: #8b7a62;
+            margin-bottom: 16px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            background: #faf7f2;
+            padding: 14px 16px;
+            border-radius: 16px;
+            color: #5e4e36;
+            font-style: italic;
+            border-left: 4px solid #c9b38c;
+            text-align: left;
+        }
+
+        /* ----- 服务清单 ----- */
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .list {
+            list-style: none;
+        }
+
+        .list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0ede6;
+            font-size: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .list li:last-child {
+            border-bottom: none;
+        }
+
+        .icon-check {
+            color: #6b8c5c;
+            font-weight: bold;
+            font-size: 18px;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .icon-no {
+            color: #b55a5a;
+            font-weight: bold;
+            font-size: 18px;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* ----- 价格卡片 ----- */
+        .price-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .price-item {
+            background: #fcfaf7;
+            border-radius: 18px;
+            padding: 16px 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ede6da;
+        }
+
+        .price-label {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .price-value {
+            font-weight: 700;
+            font-size: 18px;
+            color: #8b5a2b;
+        }
+
+        .price-note {
+            font-size: 12px;
+            color: #a39480;
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        /* ----- CTA 按钮 ----- */
+        .cta-button {
+            display: block;
+            width: 100%;
+            background: #2c2416;
+            color: #ffffff;
+            text-align: center;
+            padding: 18px 20px;
+            border-radius: 18px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 6px;
+            transition: background 0.2s;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button:active {
+            background: #4a3e2c;
+        }
+
+        .wechat-hint {
+            text-align: center;
+            font-size: 13px;
+            color: #a39480;
+            margin-top: 12px;
+        }
+
+        /* ----- 底部 ----- */
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #c4b8a5;
+            margin-top: 24px;
+        }
+
+        /* 安全提示 */
+        .safety {
+            font-size: 13px;
+            color: #a39480;
+            text-align: center;
+            margin-top: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 头部介绍 -->
+    <div class="card hero">
+        <div class="avatar">🧑‍🤝‍🧑</div>
+        <h1>陪伴搭子</h1>
+        <p class="subtitle">你需要的时候，我就在旁边。</p >
+        <div class="tagline">
+            “我不提供解决方案，不代替你去社交。我只是在你身边，安静地当一个同伴。”
+        </div>
+    </div>
+
+    <!-- 我可以做什么 -->
+    <div class="card">
+        <h2 class="section-title">✅ 我可以陪你做这些</h2>
+        <ul class="list">
+            <li><span class="icon-check">✔</span> 一起吃饭、逛公园、逛街、喝咖啡</li>
+            <li><span class="icon-check">✔</span> 陪你去看病、拿药，在旁边照顾你</li>
+            <li><span class="icon-check">✔</span> 听你倾诉工作、感情、任何你想说的事</li>
+            <li><span class="icon-check">✔</span> 一起看电影、看展、去书店或图书馆</li>
+            <li><span class="icon-check">✔</span> 陪你体验“火车站送别”那种奔跑的感觉</li>
+            <li><span class="icon-check">✔</span> 其他纯粹陪伴（提前沟通即可）</li>
+        </ul>
+    </div>
+
+    <!-- 我不做什么 -->
+    <div class="card">
+        <h2 class="section-title">❌ 这些我不做（明确边界）</h2>
+        <ul class="list">
+            <li><span class="icon-no">✘</span> 任何体力劳动（搬家、修东西等）</li>
+            <li><span class="icon-no">✘</span> 任何违法、违规或色情相关委托</li>
+            <li><span class="icon-no">✘</span> 任何让我感觉不安全的事</li>
+            <li><span class="icon-no">✘</span> 不代劳、不演戏、不欺骗他人</li>
+        </ul>
+        <p class="safety">
+            ⚠️ 安全优先：第一次见面只在公共场所。我有权随时终止服务。
+        </p >
+    </div>
+
+    <!-- 价格 -->
+    <div class="card">
+        <h2 class="section-title">💰 价格（试运营）</h2>
+        <div class="price-grid">
+            <div class="price-item">
+                <span class="price-label">⏱️ 1 小时陪伴</span>
+                <span class="price-value">50 元</span>
+            </div>
+            <div class="price-item">
+                <span class="price-label">🌤️ 半天陪伴（4小时）</span>
+                <span class="price-value">180 元</span>
+            </div>
+            <div class="price-item">
+                <span class="price-label">🚂 特别体验：火车送别</span>
+                <span class="price-value">88 元/次</span>
+            </div>
+        </div>
+        <p class="price-note">* 交通费、门票、餐饮等由你承担。其他特殊需求可微信沟通。</p >
+    </div>
+
+    <!-- 联系我 -->
+    <div class="card" style="text-align: center;">
+        <h2 class="section-title" style="justify-content: center;">📩 现在就联系我</h2>
+        <p style="margin-bottom: 16px; font-size: 15px; color: #5e4e36;">
+            告诉我你需要什么样的陪伴，我们提前聊聊。
+        </p >
+        <a class="cta-button" href="weixin://contacts/profile/Zlin_0212-">➕ 添加微信 · 预约陪伴</a >
+        <p class="wechat-hint">
+            添加时请备注“陪伴”，我会尽快回复你。
+        </p >
+    </div>
+
+    <p class="footer">
+        陪伴搭子 · 一个真诚的临时同伴<br>不提供性服务 · 不违法 · 不留宿
+    </p >
+
+</body>
+</html>
